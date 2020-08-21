@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: gaming_font;
+    src: url(SportypoReguler-OVGwe.ttf);
+}
+
+#main_frame {
+    margin: 50px auto;
+    width: 400px;
+    height: 300px;
+    outline: 1px solid black;
+    overflow: hidden;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+#character {
+    background-image: url(character.png);
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 260px;
+    left: 40px;
+}
+
+#obstacle {
+    background-image: url(obstacle.png);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 240px;
+    left: 400px;
+}
+
+.animate_obstacle {
+    animation: obstacle_running 2s infinite linear;
+}
+
+.animate_jump {
+    animation: jump 500ms;
+}
+
+@keyframes obstacle_running {
+    0%{left: 400px;}
+    100%{left: -20px;}
+}
+
+@keyframes jump {
+    0%{top: 260px;}
+    30%{top: 230px;}
+    70%{top: 230px;}
+    100%{top: 260px;}
+}
+
+#score {
+    position: relative;
+    top: -50px;
+    left: 300px;
+    color: red;
+}
+
+#play_button {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 70px;
+}
+
+#high_score {
+    position: relative;
+    width: 100px;
+    height: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 30px;
+    text-align: center;
+}
+
+.hide {
+    visibility: hidden;
+}
