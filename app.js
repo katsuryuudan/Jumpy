@@ -35,7 +35,7 @@ function remove_jump() {
     var obstacle_left = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
     if(obstacle_left <= 40) {
         add_point();
-        console.log(obstacle_left);
+        //console.log(obstacle_left);
     }
 }
 
