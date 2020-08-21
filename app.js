@@ -33,7 +33,8 @@ function animate_jump() {
 function remove_jump() {
     character.classList.remove("animate_jump");
     var obstacle_left = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-    if(obstacle_left <= 40 || obstacle_left > 340) {
+    console.log(obstacle_left);
+    if(obstacle_left <= 40) {
     add_point();
     }
 }
@@ -47,7 +48,7 @@ var check_dead = setInterval(function() {
     var character_top = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var obstacle_left = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
     //console.log(character_top);
-    console.log(obstacle_left);
+    //console.log(obstacle_left);
     if((obstacle_left < 60 && obstacle_left > 40) && character_top > 240){
         death_screen();
     }
