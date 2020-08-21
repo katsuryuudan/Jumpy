@@ -33,9 +33,9 @@ function animate_jump() {
 function remove_jump() {
     character.classList.remove("animate_jump");
     var obstacle_left = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-    console.log(obstacle_left);
     if(obstacle_left <= 40) {
-    add_point();
+        add_point();
+        console.log(obstacle_left);
     }
 }
 
